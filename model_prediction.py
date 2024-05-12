@@ -1,0 +1,5 @@
+model=MLPClassifier(alpha=0.001, batch_size=125, hidden_layer_sizes=(300,), learning_rate='adaptive', max_iter=900)
+model.fit(x_train,y_train)
+y_pred=model.predict(x_test)
+accuracy=accuracy_score(y_true=y_test, y_pred=y_pred)
+print("Accuracy:", accuracy*100, "%")
